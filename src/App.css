@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply w-screen h-screen flex justify-center items-center;
+}
+
+.enter-bottom {
+  transform: translate(0, 100vh);
+}
+
+.enter-top {
+  transform: translate(0, -100vh);
+}
+
+.enter-left {
+  transform: translate(100vw, 0);
+}
+
+.enter-bottom-done {
+  transform: translate(0, 0);
+  transition: transform 300ms;
+}
+
+.exit-top {
+  transform: translate(0, 0);
+}
+
+.exit-top-done {
+  transform: translate(0, 100vh);
+  transition: transform 300ms;
+}
