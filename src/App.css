@@ -1,33 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700;800;900&family=Caveat&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-section {
-  @apply w-screen h-screen flex justify-center items-center;
+:root {
+  --margin: 60px;
 }
 
-.enter-bottom {
-  transform: translate(0, 100vh);
+.main {
+  width: calc(100vw - var(--margin));
 }
 
-.enter-top {
-  transform: translate(0, -100vh);
+@media screen and (min-width: 1000px) {
+  :root {
+    --margin: 15vw;
+  }
+
+  .main {
+    min-height: 80vh;
+  }
 }
 
-.enter-left {
-  transform: translate(100vw, 0);
+body {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
-.enter-bottom-done {
-  transform: translate(0, 0);
-  transition: transform 300ms;
+h1 {
+  @apply font-bold md:text-8xl text-5xl tracking-wider;
 }
 
-.exit-top {
-  transform: translate(0, 0);
+h2 {
+  @apply font-bold md:text-5xl text-3xl tracking-wider;
 }
 
-.exit-top-done {
-  transform: translate(0, 100vh);
-  transition: transform 300ms;
+h3 {
+  @apply md:text-3xl text-xl font-bold tracking-wider;
+}
+
+h4 {
+  @apply md:text-xl text-base font-semibold tracking-wide;
+}
+
+h5 {
+  @apply md:text-base text-xs tracking-wide;
+}
+
+.button-primary {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  background-size: 200% 100%;
+  background-position: right bottom;
+  color: white;
+  @apply md:text-xl text-center text-base font-semibold tracking-wide px-4 py-2 rounded-xl border border-white transition-all duration-300 transform hover:scale-110 hover:rotate-2;
+}
+
+.button-primary:hover {
+  color: inherit;
+  background-position: left bottom;
+}
+
+.main-hover {
+  @apply transition-all duration-300 opacity-80 hover:opacity-100;
 }

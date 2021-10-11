@@ -1,0 +1,134 @@
+.enter-bottom {
+  transform: translate(0, -100vh);
+}
+
+.enter-top {
+  transform: translate(0, 100vh);
+}
+
+.enter-left {
+  transform: translate(100vw, 0);
+}
+
+.enter-right {
+  transform: translate(-100vw, 0);
+}
+
+.enter-done {
+  transform: translate(0, 0);
+  transition: transform 300ms;
+}
+
+.after {
+  animation-fill-mode: both;
+}
+
+.after-200 {
+  animation-fill-mode: both;
+  animation-delay: 0.2s;
+}
+
+.after-300 {
+  animation-fill-mode: both;
+  animation-delay: 0.3s;
+}
+
+.after-400 {
+  animation-fill-mode: both;
+  animation-delay: 0.4s;
+}
+
+.after-500 {
+  animation-fill-mode: both;
+  animation-delay: 0.5s;
+}
+
+.after-600 {
+  animation-fill-mode: both;
+  animation-delay: 0.6s;
+}
+
+.after-800 {
+  animation-fill-mode: both;
+  animation-delay: 0.8s;
+}
+
+.after-1000 {
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+
+.after-1200 {
+  animation-fill-mode: both;
+  animation-delay: 1.2s;
+}
+
+.after-1400 {
+  animation-fill-mode: both;
+  animation-delay: 1.4s;
+}
+
+.after-1500 {
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+}
+
+.after-1600 {
+  animation-fill-mode: both;
+  animation-delay: 1.6s;
+}
+
+.after-1800 {
+  animation-fill-mode: both;
+  animation-delay: 1.8s;
+}
+
+.after-2000 {
+  animation-fill-mode: both;
+  animation-delay: 2s;
+}
+
+.show-100 {
+  animation-duration: 100ms;
+}
+.show-200 {
+  animation-duration: 200ms;
+}
+.show-300 {
+  animation-duration: 300ms;
+}
+.show-400 {
+  animation-duration: 400ms;
+}
+.show-500 {
+  animation-duration: 500ms;
+}
+.show-600 {
+  animation-duration: 600ms;
+}
+.show-800 {
+  animation-duration: 800ms;
+}
+.show-1000 {
+  animation-duration: 1500ms;
+}
+
+.show-2000 {
+  animation-duration: 2000ms;
+}
+
+.show-4000 {
+  animation-duration: 4000ms;
+}
+
+.show-6000 {
+  animation-duration: 6000ms;
+}
+
+.show-8000 {
+  animation-duration: 8000ms;
+}
+
+.show-10000 {
+  animation-duration: 10000ms;
+}
