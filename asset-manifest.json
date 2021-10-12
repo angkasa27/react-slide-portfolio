@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/react-slide-portfolio/static/css/main.8d0e43c2.chunk.css",
-    "main.js": "/react-slide-portfolio/static/js/main.f6b30cd0.chunk.js",
-    "main.js.map": "/react-slide-portfolio/static/js/main.f6b30cd0.chunk.js.map",
-    "runtime-main.js": "/react-slide-portfolio/static/js/runtime-main.a95244be.js",
-    "runtime-main.js.map": "/react-slide-portfolio/static/js/runtime-main.a95244be.js.map",
-    "static/js/2.71b59eb4.chunk.js": "/react-slide-portfolio/static/js/2.71b59eb4.chunk.js",
-    "static/js/2.71b59eb4.chunk.js.map": "/react-slide-portfolio/static/js/2.71b59eb4.chunk.js.map",
-    "static/js/3.f3d36815.chunk.js": "/react-slide-portfolio/static/js/3.f3d36815.chunk.js",
-    "static/js/3.f3d36815.chunk.js.map": "/react-slide-portfolio/static/js/3.f3d36815.chunk.js.map",
+    "main.css": "/react-slide-portfolio/static/css/main.9d7e75d6.chunk.css",
+    "main.js": "/react-slide-portfolio/static/js/main.7b85cee9.chunk.js",
+    "main.js.map": "/react-slide-portfolio/static/js/main.7b85cee9.chunk.js.map",
+    "runtime-main.js": "/react-slide-portfolio/static/js/runtime-main.191192fb.js",
+    "runtime-main.js.map": "/react-slide-portfolio/static/js/runtime-main.191192fb.js.map",
+    "static/js/2.92d7b0ef.chunk.js": "/react-slide-portfolio/static/js/2.92d7b0ef.chunk.js",
+    "static/js/2.92d7b0ef.chunk.js.map": "/react-slide-portfolio/static/js/2.92d7b0ef.chunk.js.map",
+    "static/js/3.1a9dc23c.chunk.js": "/react-slide-portfolio/static/js/3.1a9dc23c.chunk.js",
+    "static/js/3.1a9dc23c.chunk.js.map": "/react-slide-portfolio/static/js/3.1a9dc23c.chunk.js.map",
     "index.html": "/react-slide-portfolio/index.html",
-    "static/css/main.8d0e43c2.chunk.css.map": "/react-slide-portfolio/static/css/main.8d0e43c2.chunk.css.map",
-    "static/js/2.71b59eb4.chunk.js.LICENSE.txt": "/react-slide-portfolio/static/js/2.71b59eb4.chunk.js.LICENSE.txt"
+    "static/css/main.9d7e75d6.chunk.css.map": "/react-slide-portfolio/static/css/main.9d7e75d6.chunk.css.map",
+    "static/js/2.92d7b0ef.chunk.js.LICENSE.txt": "/react-slide-portfolio/static/js/2.92d7b0ef.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a95244be.js",
-    "static/js/2.71b59eb4.chunk.js",
-    "static/css/main.8d0e43c2.chunk.css",
-    "static/js/main.f6b30cd0.chunk.js"
+    "static/js/runtime-main.191192fb.js",
+    "static/js/2.92d7b0ef.chunk.js",
+    "static/css/main.9d7e75d6.chunk.css",
+    "static/js/main.7b85cee9.chunk.js"
   ]
 }
