@@ -1,18 +1,30 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
-import { Logo } from "../../assets/SVG";
+import { Arrow1, Arrow2, Logo } from "../../assets/SVG";
 
 export default function Navbar(props) {
-  const location = useLocation();
+  const { pathname } = useLocation();
   const { routes } = props;
 
   return (
-    <nav className="fixed w-screen px-10 py-5 z-50 text-white">
-      <div className="flex justify-between">
+    <nav className="fixed w-screen px-10 py-2 md:py-5 z-50 text-white">
+      {pathname === "/home" && (
+        <>
+          <div className="absolute top-20 right-36  transform rotate-6 opacity-50 hidden md:block">
+            <Arrow1 className="animate-scale show-300 after-2500" />
+          </div>
+
+          <div className="absolute top-20 right-1/3  transform -rotate-6 opacity-50 md:hidden">
+            <Arrow2 className="animate-scale show-300 after-2500 h-24" />
+          </div>
+        </>
+      )}
+
+      <div className="flex justify-center md:justify-between">
         <NavLink
           to="/"
-          className="transform transition-all duration-300 hover:rotate-12"
+          className="transform transition-all duration-300 hover:rotate-12 hidden md:block"
         >
           <Logo className="w-12 h-12 " />
         </NavLink>
@@ -23,10 +35,10 @@ export default function Navbar(props) {
                 activeClassName="opacity-100"
                 to={route.path}
                 key={route.path}
-                className="text-lg m-3 font-semibold tracking-wide flex flex-col items-center transform hover:scale-110 hover:rotate-3 main-hover"
+                className="transition-all duration-300 opacity-70 hover:opacity-100 text-lg m-3 font-semibold tracking-wide flex flex-col items-center transform hover:scale-110 hover:rotate-3 "
               >
                 {route.name}
-                {location.pathname === route.path && (
+                {pathname === route.path && (
                   <div className="w-2 h-2 rounded-full bg-white" />
                 )}
               </NavLink>

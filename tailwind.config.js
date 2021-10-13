@@ -52,10 +52,6 @@ module.exports = {
           "0%, 100%": { transform: "translate(-3rem, 1rem) scale(125%)" },
           "50%": { transform: "translate(-3rem, 0rem) scale(125%)" },
         },
-        upDownRes: {
-          "0%, 100%": { transform: "translate(0, 0.5rem)" },
-          "50%": { transform: "translate(0, -0.5rem)" },
-        },
         bgUp: {
           "0%, 100%": { transform: "translate(0, 0rem)" },
           "50%": { transform: "translate(0, 1rem)" },
@@ -80,9 +76,13 @@ module.exports = {
           "0%": { transform: "translate(-100%, 0)" },
           "100%": { transform: "translate(0, 0rem)" },
         },
+        scale: {
+          "0%": { transform: "scale(.7)", opacity: "0" },
+          "100%": { transform: "scale(1)", opacity: "1" },
+        },
         scaleUp: {
-          "0%": { transform: "scale(.7,.7)", opacity: "0" },
-          "100%": { transform: "scale(1,1)", opacity: "1" },
+          "0%": { transform: "translate(0, 50%) scale(0.5)", opacity: "0" },
+          "100%": { transform: "translate(0, 0) scale(1)", opacity: "1" },
         },
         out: {
           "0%": { transform: "translate(0, 0)" },
@@ -91,23 +91,35 @@ module.exports = {
       },
       animation: {
         upDown: "upDown ease-in-out infinite",
-        upDownRes: "upDownRes 4s ease-in-out infinite",
         itemUp: "up ease-in-out",
         itemUpFar: "upFar ease-in-out",
         itemDown: "down ease-in-out",
         itemLeft: "left ease-in-out",
         itemRight: "right ease-in-out",
-        scale: "scaleUp ease-in-out",
+        scale: "scale ease-in-out",
+        scaleUp: "scaleUp ease-in",
         out: "out .3s ease-out",
       },
       margin: {
         screen10: "10vh",
+      },
+      height: {
+        screen80: "80vh",
+        screen75: "75vh",
+      },
+      inset: {
+        "1/5": "20%",
+        "2/5": "40%",
+        "3/5": "60%",
+        "4/5": "80%",
+        "5/5": "100%",
       },
     },
   },
   variants: {
     extend: {
       letterSpacing: ["hover", "focus"],
+      flexDirection: ["hover", "focus"],
     },
   },
   plugins: [],

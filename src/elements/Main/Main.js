@@ -5,7 +5,7 @@ export default function Main({ children, bgClass, className }) {
   return (
     <section
       className={
-        "font-fira font-normal w-screen min-h-screen flex justify-center items-center fixed top-0 left-0 " +
+        "no-select font-fira font-normal w-screen min-h-screen flex justify-center items-center fixed top-0 left-0 " +
         bgClass
       }
     >

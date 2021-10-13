@@ -1,4 +1,4 @@
-import { Home, About, Project, Skill } from "../pages";
+import { Home, About, Project } from "../pages";
 
 const routes = [
   {
@@ -20,15 +20,15 @@ const routes = [
       enterActive: "enter-done z-20",
     },
   },
-  {
-    path: "/skill",
-    name: "Skill",
-    Component: Skill,
-    transition: {
-      enter: "enter-right z-20",
-      enterActive: "enter-done z-20",
-    },
-  },
+  // {
+  //   path: "/skill",
+  //   name: "Skill",
+  //   Component: Skill,
+  //   transition: {
+  //     enter: "enter-right z-20",
+  //     enterActive: "enter-done z-20",
+  //   },
+  // },
   {
     path: "/project",
     name: "Project",

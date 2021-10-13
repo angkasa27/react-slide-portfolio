@@ -19,6 +19,196 @@
   transition: transform 300ms;
 }
 
+/* -------------------------- FADEBACK -------------------------- */
+
+.fadeBack-enter {
+  transform: translate(-100%, 0) scale(0);
+  opacity: 0;
+}
+
+.fadeBack-enter-active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
+}
+
+.fadeBack-exit {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.fadeBack-exit-active {
+  transform: translate(0%, -100%) scale(0);
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* -------------------------- FADENEXT -------------------------- */
+
+.fadeNext-enter {
+  transform: translate(0%, -100%) scale(0);
+  opacity: 0;
+}
+
+.fadeNext-enter-active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: transform 500ms, opacity 500ms;
+}
+
+.fadeNext-exit {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.fadeNext-exit-active {
+  transform: translate(-100%, 0) scale(0);
+  opacity: 0;
+  transition: transform 500ms, opacity 500ms;
+}
+
+/* -------------------------- head -------------------------- */
+
+.head-enter {
+  transform: translate(0, 100%);
+}
+
+.head-enter-active {
+  transform: translate(0, 0);
+}
+
+.head-exit {
+  opacity: 1;
+}
+
+.head-exit-active {
+  opacity: 0;
+}
+
+.head-enter-active {
+  transition: transform 300ms;
+}
+
+.head-exit-active {
+  transition: opacity 300ms;
+}
+/* -------------------------- Hide -------------------------- */
+
+.hide-enter {
+  opacity: 0;
+  transform: translate(0, 50%) scale(0.5);
+}
+
+.hide-enter-active {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.hide-exit {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+.hide-exit-active {
+  opacity: 0;
+  transform: translate(0, 0) scale(0.5);
+}
+
+.hide-enter-active,
+.hide-exit-active {
+  transition: transform 300ms, opacity 300ms;
+}
+
+/* -------------------------- show -------------------------- */
+
+.show-enter {
+  opacity: 0;
+}
+
+.show-enter-active {
+  opacity: 1;
+}
+
+.show-exit {
+  opacity: 1;
+}
+
+.show-exit-active {
+  opacity: 0;
+}
+
+.show-enter-active,
+.show-exit-active {
+  transition: opacity 300ms;
+}
+
+/* -------------------------- window -------------------------- */
+
+.window-enter {
+  width: 18rem;
+  /* transform: translate(0, 50%) scale(0.5); */
+}
+
+.window-enter-active {
+  width: 100%;
+  /* transform: translate(0, 0) scale(1); */
+}
+
+.window-enter-done {
+  width: 100%;
+  /* transform: translate(0, 0) scale(1); */
+}
+
+.window-exit {
+  width: 100%;
+  /* transform: translate(0, 0) scale(1); */
+}
+
+.window-exit-active {
+  width: 18rem;
+  /* transform: translate(0, 50%) scale(0.5); */
+}
+
+.window-enter-active,
+.window-exit-active {
+  transition: width 300ms;
+}
+
+/* -------------------------- windowHide -------------------------- */
+
+.windowHide-enter {
+  width: 18rem;
+  opacity: 1;
+}
+
+.windowHide-enter-active {
+  width: 0;
+  opacity: 0;
+}
+
+.windowHide-enter-done {
+  width: 0;
+  opacity: 0;
+  display: hidden;
+}
+
+.windowHide-exit {
+  width: 0;
+  opacity: 0;
+}
+
+.windowHide-exit-active {
+  width: 18rem;
+  opacity: 1;
+}
+
+.window-enter-active,
+.window-exit-active {
+  transition: width 300ms, opacity 300ms;
+}
+
+/* -------------------------- Timing -------------------------- */
+
 .after {
   animation-fill-mode: both;
 }
@@ -86,6 +276,20 @@
 .after-2000 {
   animation-fill-mode: both;
   animation-delay: 2s;
+}
+.after-2200 {
+  animation-fill-mode: both;
+  animation-delay: 2.2s;
+}
+
+.after-2400 {
+  animation-fill-mode: both;
+  animation-delay: 2.4s;
+}
+
+.after-2500 {
+  animation-fill-mode: both;
+  animation-delay: 2.5s;
 }
 
 .show-100 {
