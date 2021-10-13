@@ -10,38 +10,6 @@ module.exports = {
         fira: ["Fira Sans", "sans-serif"],
         hand: ["Caveat", "sans-serif"],
       },
-      colors: {
-        blue2: {
-          light: "#C1FAFF",
-          DEFAULT: "#44BDDD",
-          dark: "#0087A6",
-        },
-        green2: {
-          light: "#D1FBE1",
-          DEFAULT: "#4EBF85",
-          dark: "#008953",
-        },
-        brown2: {
-          light: "#FAF1CA",
-          DEFAULT: "#BAAD4E",
-          dark: "#817844",
-        },
-        orange2: {
-          light: "#FFE6D9",
-          DEFAULT: "#FA8E73",
-          dark: "#A56758",
-        },
-        pink2: {
-          light: "#FFE3ED",
-          DEFAULT: "#FF85A2",
-          dark: "#C34F6F",
-        },
-        purple2: {
-          light: "#FAEAFF",
-          DEFAULT: "#BE9BF3",
-          dark: "#8767BA",
-        },
-      },
       translate: {
         "screen-h": "100vh",
         "screen-w": "100vw",
@@ -51,10 +19,6 @@ module.exports = {
         upDown: {
           "0%, 100%": { transform: "translate(-3rem, 1rem) scale(125%)" },
           "50%": { transform: "translate(-3rem, 0rem) scale(125%)" },
-        },
-        bgUp: {
-          "0%, 100%": { transform: "translate(0, 0rem)" },
-          "50%": { transform: "translate(0, 1rem)" },
         },
         up: {
           "0%": { transform: "translate(0, 100%)" },

@@ -15,12 +15,12 @@ export default function Home() {
   );
   return (
     <Main
-      bgClass="bg-blue2"
+      bgClass="bg-blue-400"
       className="flex flex-col items-center justify-center text-white mt-screen10 md:mt-0 relative"
     >
       {blob}
       <div className="overflow-hidden">
-        <h2 className="text-blue2-dark font-hand animate-itemRight after show-500">
+        <h2 className="text-blue-600 font-hand animate-itemRight after show-500">
           Hi there!
         </h2>
         <h1 className="mr-3 animate-itemUp after-400 show-300 mt-2 flex">
@@ -35,17 +35,17 @@ export default function Home() {
         </h1>
       </div>
       <div className="overflow-hidden mt-4 md:mt-2">
-        <h4 className="text-blue2-light uppercase animate-itemUp after-1000 show-300 text-center">
+        <h4 className="text-blue-200 uppercase animate-itemUp after-1000 show-300 text-center">
           I'm a FrontEnd Developer and Graphic Designer
         </h4>
       </div>
       <div className="overflow-hidden">
-        <h4 className="text-blue2-light uppercase animate-itemUp  after-1200 show-300 text-center">
+        <h4 className="text-blue-200 uppercase animate-itemUp  after-1200 show-300 text-center">
           Currently working at Telkom Indonesia
         </h4>
       </div>
 
-      <div className="flex text-blue2 mt-4 md:mt-8 flex-col md:flex-row items-center">
+      <div className="flex text-blue-400 mt-4 md:mt-8 flex-col md:flex-row items-center">
         <div className=" mt-6 md:mt-0 md:mx-3 w-56 md:w-auto animate-scale show-200 after-1800">
           <a
             href="https://instagram.com/angka.asa"

@@ -207,6 +207,34 @@
   transition: width 300ms, opacity 300ms;
 }
 
+/* -------------------------- Slide -------------------------- */
+
+.slide-enter {
+  transform: rotate(45deg);
+  transform-origin: bottom center;
+  z-index: 20;
+}
+
+.slide-enter-active {
+  transform: rotate(0deg);
+  transform-origin: bottom center;
+  z-index: 20;
+  transition: transform 750ms;
+}
+
+.slide-exit {
+  transform: rotate(0deg);
+  opacity: 1;
+  transform-origin: bottom center;
+}
+
+.slide-exit-active {
+  transform: rotate(-45deg);
+  opacity: 0;
+  transform-origin: bottom center;
+  transition: transform 750ms, opacity 200ms;
+}
+
 /* -------------------------- Timing -------------------------- */
 
 .after {
@@ -308,6 +336,9 @@
   animation-duration: 500ms;
 }
 .show-600 {
+  animation-duration: 600ms;
+}
+.show-700 {
   animation-duration: 600ms;
 }
 .show-800 {

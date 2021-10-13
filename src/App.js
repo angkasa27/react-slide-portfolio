@@ -30,7 +30,7 @@ function App() {
       <Route exact path="/react-slide-portfolio">
         <Redirect to="/home" />
       </Route>
-      <div className="z-50 fixed bottom-0 w-screen flex justify-between text-xs py-2 md:px-10 px-2 text-white uppercase opacity-50 tracking-full">
+      <div className="z-50 fixed bottom-0 w-screen flex justify-between text-xs py-2 md:px-10 px-2 text-white uppercase opacity-30 tracking-full">
         <p>dimas angkasa nurindra</p>
         <p>© 2021</p>
       </div>

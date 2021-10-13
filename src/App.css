@@ -59,25 +59,24 @@ h5 {
   @apply border-white;
 }
 
-.button-purple {
+.button-yellow {
   background: linear-gradient(
     to right,
-    rgba(135, 103, 186, 1) 50%,
+    rgba(217, 119, 6, 1) 50%,
     rgba(0, 0, 0, 0) 50%
   );
-  color: #8767ba;
-  @apply border-purple2-dark;
+  @apply border-yellow-600 text-yellow-600;
 }
 
 .button-primary,
-.button-purple {
+.button-yellow {
   background-size: 200% 100%;
   background-position: right bottom;
   @apply md:text-xl text-center text-base font-semibold tracking-wide px-4 py-2 rounded-xl border transition-all duration-300 transform hover:scale-110 hover:rotate-2;
 }
 
 .button-primary:hover,
-.button-purple:hover {
+.button-yellow:hover {
   color: inherit;
   background-position: left bottom;
 }

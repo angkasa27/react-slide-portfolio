@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Arrow3 } from "../../../../assets/SVG";
 import { CSSTransition } from "react-transition-group";
@@ -13,6 +13,13 @@ const awards = [
   },
   {
     name: "UNIPRO STAGE 5",
+    rank: "1st Place",
+    desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id obcaecati labore, provident aperiam excepturi. Facilis odit quaemaxime minima soluta velit, debitis libero labore, voluptatibus quod, ea repellendus esse.",
+    project: "/",
+    certificate: "/",
+  },
+  {
+    name: "WDC ASIA 2K20",
     rank: "1st Place",
     desc: " Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id obcaecati labore, provident aperiam excepturi. Facilis odit quaemaxime minima soluta velit, debitis libero labore, voluptatibus quod, ea repellendus esse.",
     project: "/",
@@ -54,7 +61,7 @@ export default function Achievement({ open }) {
       <div className="transition-all duration-300 flex flex-col md:flex-row justify-evenly items-center w-full h-full p-5 ">
         <div
           onClick={() => backPosition()}
-          className="cursor-pointer z-20 md:block hidden transform hover:-rotate-45 transition-all duration-300"
+          className="cursor-pointer z-20 md:block hidden transform hover:-rotate-12 transition-all duration-300"
         >
           <Arrow3 className="w-12 h-12 transform rotate-180" />
         </div>
@@ -87,7 +94,7 @@ export default function Achievement({ open }) {
 
         <div
           onClick={() => nextPosition()}
-          className="cursor-pointer z-20 md:block hidden transform hover:-rotate-45 transition-all duration-300"
+          className="cursor-pointer z-20 md:block hidden transform hover:-rotate-12 transition-all duration-300"
         >
           <Arrow3 className="w-12 h-12" />
         </div>
@@ -107,17 +114,17 @@ Achievement.propTypes = {
 export function Item({ data }) {
   return (
     <div className="flex flex-col justify-center items-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <h2 className="text-purple2 md:leading-3 bg-red text-center">
+      <h2 className="text-yellow-400 md:leading-3 bg-red text-center">
         {data.name}
       </h2>
-      <h2 className="text-purple2-dark font-hand text-center">{data.rank}</h2>
-      <h5 className="text-purple2 text-center mt-5">{data.desc}</h5>
-      <div className="flex">
+      <h2 className="text-yellow-600 font-hand text-center">{data.rank}</h2>
+      <h5 className="text-yellow-400 text-center mt-5">{data.desc}</h5>
+      <div className="flex text-white">
         <a
           href={data.project}
           target="_blank"
           rel="noreferrer"
-          className="button-purple mt-5 mr-5"
+          className="button-yellow mt-5 mr-5 "
         >
           Project
         </a>
@@ -125,7 +132,7 @@ export function Item({ data }) {
           href={data.certificate}
           target="_blank"
           rel="noreferrer"
-          className="button-purple mt-5"
+          className="button-yellow mt-5 "
         >
           Certificate
         </a>

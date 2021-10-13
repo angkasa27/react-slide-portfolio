@@ -11,23 +11,32 @@ const menus = [
   {
     name: "skill",
     Component: Skill,
+    bg: ["bg-red-200", "bg-red-400", "bg-red-600"],
+    color: "text-red-400",
   },
   {
     name: "profile",
     Component: Profile,
     className: "my-5 md:my-0",
+    bg: ["bg-blue-200", "bg-blue-400", "bg-blue-600"],
+    color: "text-blue-400",
   },
   {
     name: "achievement",
     Component: Achievement,
+    bg: ["bg-yellow-200", "bg-yellow-400", "bg-yellow-600"],
+    color: "text-yellow-400",
   },
 ];
 
 export default function About() {
   const [open, setOpen] = useState(false);
   const [position, setPosition] = useState("");
+  const [bg, setBg] = useState("bg-green-400");
   const [opened, setOpened] = useState(false);
   const [closed, setClosed] = useState(true);
+
+  console.log(bg);
 
   const blob = (
     <>
@@ -51,18 +60,25 @@ export default function About() {
 
   return (
     <Main
-      bgClass="bg-purple2"
-      className="flex flex-col md:flex-row md:justify-evenly items-center text-purple2-light"
+      bgClass={bg}
+      className="flex flex-col md:flex-row md:justify-evenly items-center text-white"
     >
       {blob}
-      {menus.map((i) => (
+      {menus.map((i, key) => (
         <CSSTransition
+          key={key}
           in={open}
           timeout={300}
           classNames={position === i.name ? "window" : "windowHide"}
-          onEnter={() => setClosed(false)}
+          onEnter={() => {
+            setClosed(false);
+            position === i.name && setBg(menus[key].bg[1]);
+          }}
           onEntered={() => setOpened(true)}
-          onExit={() => setOpened(false)}
+          onExit={() => {
+            setOpened(false);
+            setBg("bg-green-400");
+          }}
           onExited={() => setClosed(true)}
         >
           <SubMenu
@@ -72,6 +88,8 @@ export default function About() {
             className={i.className}
             close={closed}
             opened={opened}
+            bg={i.bg}
+            color={i.color}
           >
             <i.Component open={position === i.name && opened} />
           </SubMenu>
@@ -82,8 +100,17 @@ export default function About() {
 }
 
 export function SubMenu(props) {
-  const { children, name, className, useOpen, usePosition, close, opened } =
-    props;
+  const {
+    children,
+    name,
+    className,
+    useOpen,
+    usePosition,
+    close,
+    opened,
+    bg,
+    color,
+  } = props;
   const [width, setWidth] = useState(" hover:-translate-y-2 cursor-pointer");
   const [height, setHeight] = useState("md:h-72 h-48  ");
   const [ping, setPing] = useState(" hidden");
@@ -97,7 +124,7 @@ export function SubMenu(props) {
       setPing(" animate-ping cursor-pointer");
       if (name === "skill") setHeight("h-screen80 mt-screen10");
     } else if (!open) {
-      setWidth(" hover:-translate-y-2");
+      setWidth(" hover:-translate-y-2 cursor-pointer");
       setPing(" hidden");
       setHeight("md:h-72 h-48 ");
     }
@@ -123,16 +150,22 @@ export function SubMenu(props) {
       <div className="w-full border-b-2 border-white flex justify-between items-center px-2 absolute">
         <h5 className="text-white">{name}</h5>
         <div className="flex justify-end items-center">
-          <div className="md:w-3 w-2 md:h-3 h-2 rounded-full bg-purple2-light bg-opacity-50" />
-          <div className="md:w-3 w-2 md:h-3 h-2 rounded-full bg-purple2-light bg-opacity-70 mx-1.5" />
+          <div className="md:w-3 w-2 md:h-3 h-2 rounded-full bg-white bg-opacity-50" />
+          <div className="md:w-3 w-2 md:h-3 h-2 rounded-full bg-white bg-opacity-70 mx-1.5" />
           <div
             className="relative md:w-4 w-3 md:h-4 h-3"
             onClick={() => position === name && open && handleOpen()}
           >
-            <div className="md:w-4 w-3 md:h-4 h-3 rounded-full bg-purple2-dark absolute -top-0 left-0 z-50 " />
             <div
               className={
-                "md:w-5 w-4 md:h-5 h-4 rounded-full bg-purple2-dark absolute -top-0.5 -left-0.5 z-50 " +
+                bg[2] +
+                " md:w-4 w-3 md:h-4 h-3 rounded-full transition-colors duration-300  absolute -top-0 left-0 z-50 "
+              }
+            />
+            <div
+              className={
+                bg[2] +
+                " md:w-5 w-4 md:h-5 h-4 rounded-full transition-colors duration-300 absolute -top-0.5 -left-0.5 z-50 " +
                 ping
               }
             />
@@ -141,7 +174,11 @@ export function SubMenu(props) {
       </div>
 
       <div className="p-3 pt-8 md:pt-10 h-full z-10 ">
-        <div className=" bg-purple2-light rounded-lg h-full w-full flex flex-col justify-center items-center relative">
+        <div
+          className={
+            "bg-white rounded-lg h-full w-full flex flex-col justify-center items-center relative"
+          }
+        >
           <div className="overflow-hidden p-2">
             <CSSTransition
               in={!(!close && position === name)}
@@ -149,7 +186,11 @@ export function SubMenu(props) {
               classNames="head"
               unmountOnExit
             >
-              <h2 className="text-purple2 font-hand transition-all duration-300 capitalize ">
+              <h2
+                className={
+                  "font-hand transition-all duration-300 capitalize " + color
+                }
+              >
                 {name}
               </h2>
             </CSSTransition>
@@ -171,8 +212,10 @@ export function SubMenu(props) {
       <div
         className={
           height +
-          " border-2 border-white  bg-purple2 rounded-xl relative  transition-all duration-300 animate-scaleUp show-300 after-200 " +
-          className
+          " border-2 border-white  rounded-xl relative  transition-all duration-300 animate-scaleUp show-300 after-200 " +
+          className +
+          " " +
+          bg[1]
         }
       >
         {!(opened && position !== name) && card}
@@ -185,6 +228,8 @@ SubMenu.defaultProps = {
   useOpen: [],
   usePosition: [],
   name: "",
+  bg: "",
+  color: "",
   className: "",
   close: true,
   opened: false,
@@ -195,6 +240,8 @@ SubMenu.propTypes = {
   useOpen: PropTypes.array,
   usePosition: PropTypes.array,
   name: PropTypes.string,
+  bg: PropTypes.string,
+  color: PropTypes.string,
   close: PropTypes.bool,
   opened: PropTypes.bool,
   className: PropTypes.string,

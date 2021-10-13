@@ -316,13 +316,13 @@ export function Arrow3({ className }) {
     >
       <path
         d="M7 55C27.792 64.0554 81.1008 76.7331 128 55"
-        stroke="#8767BA"
+        stroke="#D97706"
         stroke-width="10"
         stroke-linecap="round"
       />
       <path
         d="M101.286 101.257C105.793 80.2257 135.946 51.8178 135.946 51.8178C129.109 48.306 105.691 48.7112 88.4757 28.6099"
-        stroke="#8767BA"
+        stroke="#D97706"
         stroke-width="10"
         stroke-linecap="round"
         stroke-linejoin="round"
