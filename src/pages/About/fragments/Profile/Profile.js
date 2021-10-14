@@ -15,16 +15,28 @@ export default function Profile({ open }) {
           />
         </div>
         <div>
-          <h2 className="text-blue-400 text-center md:text-left leading-3">
-            Dimas Angkasa N
+          <h2 className="text-blue-400 text-center md:text-left md:leading-3">
+            Dimas Angkasa Nurindra
           </h2>
-          <h3 className="text-blue-600 font-hand">Male, 18 Years Old</h3>
-          <h5 className="text-blue-400 md:text-left text-center mt-4">
+          <h3 className="text-blue-600 font-hand text-center md:text-left">
+            Male, 18 Years Old
+          </h3>
+          <h5 className="text-blue-400 md:text-left text-center my-4">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id
             obcaecati labore, provident aperiam excepturi. Facilis odit quae
             maxime minima soluta velit, debitis libero labore, voluptatibus
             quod, ea repellendus esse.
           </h5>
+          <div className="flex justify-center md:justify-start">
+            <a
+              href="https://drive.google.com/file/d/1aF6D8n5Nm4GtpLHz5Hci9aFehTnwXgks/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="button-blue"
+            >
+              Curriculum vitae
+            </a>
+          </div>
         </div>
       </div>
     </CSSTransition>

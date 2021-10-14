@@ -68,14 +68,25 @@ h5 {
   @apply border-yellow-600 text-yellow-600;
 }
 
+.button-blue {
+  background: linear-gradient(
+    to right,
+    rgba(37, 99, 235, 1) 50%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  @apply border-blue-600 text-blue-600;
+}
+
 .button-primary,
+.button-blue,
 .button-yellow {
-  background-size: 200% 100%;
+  background-size: 210% 110%;
   background-position: right bottom;
   @apply md:text-xl text-center text-base font-semibold tracking-wide px-4 py-2 rounded-xl border transition-all duration-300 transform hover:scale-110 hover:rotate-2;
 }
 
 .button-primary:hover,
+.button-blue:hover,
 .button-yellow:hover {
   color: inherit;
   background-position: left bottom;

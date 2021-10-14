@@ -30437,13 +30437,26 @@ h5 {
   color: rgba(217, 119, 6, var(--tw-text-opacity));
 }
 
+.button-blue {
+  background: linear-gradient(
+    to right,
+    rgba(37, 99, 235, 1) 50%,
+    rgba(0, 0, 0, 0) 50%
+  );
+  --tw-border-opacity: 1;
+  border-color: rgba(37, 99, 235, var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity));
+}
+
 .button-primary,
+.button-blue,
 .button-yellow {
-  background-size: 200% 100%;
+  background-size: 210% 110%;
   background-position: right bottom;
 }
 
-.button-primary, .button-yellow{
+.button-primary, .button-blue, .button-yellow{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
   --tw-rotate: 0;
@@ -30454,13 +30467,13 @@ h5 {
   transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.button-primary:hover, .button-yellow:hover{
+.button-primary:hover, .button-blue:hover, .button-yellow:hover{
   --tw-rotate: 2deg;
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
 }
 
-.button-primary, .button-yellow{
+.button-primary, .button-blue, .button-yellow{
   border-radius: 0.75rem;
   border-width: 1px;
   padding-left: 1rem;
@@ -30479,13 +30492,14 @@ h5 {
 }
 
 @media (min-width: 768px){
-  .button-primary, .button-yellow{
+  .button-primary, .button-blue, .button-yellow{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
 .button-primary:hover,
+.button-blue:hover,
 .button-yellow:hover {
   color: inherit;
   background-position: left bottom;

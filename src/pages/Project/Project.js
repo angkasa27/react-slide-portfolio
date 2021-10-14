@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Main from "../../elements/Main/Main";
-import { Arrow3 } from "../../assets/SVG";
+import { Arrow3, Star1, Star2 } from "../../assets/SVG";
 import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 import projects from "../../constant/projects";
@@ -26,11 +26,32 @@ export default function Container() {
     }
   };
 
+  const blob = (
+    <>
+      <div className="absolute opacity-50 right-1/4 bottom-3/4 w-5">
+        <Star1 className="animate-scale show-300 after-1000 w-full" />
+      </div>
+      <div className="absolute opacity-50 left-1/3 top-16 w-5 ">
+        <Star2 className="animate-scale show-300 after-600 w-full" />
+      </div>
+      <div className="absolute opacity-50 right-1/3 bottom-20 w-5">
+        <Star1 className="animate-scale show-300 after-800 w-full" />
+      </div>
+      <div className="absolute opacity-50 left-1/5 md:top-3/4 top-full w-5 ">
+        <Star2 className="animate-scale show-300 after-1200 w-full" />
+      </div>
+      <div className="absolute opacity-50 right-20 top-1/2 w-5 ">
+        <Star2 className="animate-scale show-300 after-400 w-full" />
+      </div>
+    </>
+  );
+
   return (
     <Main
       bgClass="bg-yellow-400"
-      className=" flex flex-col justify-center items-center relative h-screen80"
+      className=" flex flex-col justify-start md:justify-center items-center relative h-screen80 text-white"
     >
+      {blob}
       {projects.map((v, i) => (
         <CSSTransition
           in={position === i}
@@ -56,7 +77,7 @@ export default function Container() {
 
 export function Project({ data }) {
   return (
-    <div className="grid grid-cols-2 gap-12 items-center w-4/5 absolute ">
+    <div className="grid grid-cols-2 gap-12 items-center w-4/5 absolute  mt-screen10 md:mt-0">
       <div className="col-span-2 md:col-span-1 relative">
         <div className="overflow-hidden rounded-lg">
           <img
